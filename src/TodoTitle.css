@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:wght@300;400;700&display=swap');
+
+
+h1 {
+    margin: 0;
+    padding: 24px 0 16px 0;
+
+    font-family: 'Italiana', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 57px;
+    text-align: center;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 7px 7px 14px #BEBEBE;
+    
+  }
