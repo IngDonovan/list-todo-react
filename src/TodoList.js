@@ -1,8 +1,12 @@
+import './TodoList.css'
+
 function TodoList ({children}) {
     return(
-      <ul>
-        {children}
-      </ul>
+      <section className = 'cont' >
+        <ul className = 'ul-box'>
+          {children}
+        </ul>
+      </section>
     );
   }
 
