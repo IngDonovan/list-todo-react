@@ -1,7 +1,11 @@
 
+const styles = {
+  backgroundColor: 'red'
+}
+
 function TodoCounter ({total,completed}) {
     return(
-      <h1>
+      <h1 style={styles}>
         Has completado {completed} de {total} TODOS
       </h1>
     );
