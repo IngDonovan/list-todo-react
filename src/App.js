@@ -9,16 +9,21 @@ import { CreateTodoButton } from './CreateTodoButton';
 
 
 const defaultTodos = [
-  { text: 'study React', completed: true },
+  { text: 'study React', completed: false },
   { text: 'try React', completed: false },
   { text: 'study Again React', completed: true },
-  { text: 'study full React', completed: false },
+  { text: 'study full React', completed: true },
+  { text: 'Enjoy React', completed: true },
 ];
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultTodos);
+
   const [searchValue, setSearchValue] = React.useState('');
   console.log('busca de ' + searchValue);
 
+  const completedTodos = todos.filter( todo => !!todo.completed).length;//doble negación para convertirlo si o si a boolean
+  const totalTodos = todos.length;
   return (
     <>
       <TodoTitle />
@@ -26,7 +31,10 @@ function App() {
         searchValue = {searchValue}
         setSearchValue = {setSearchValue}
       />
-      <TodoCounter completed={2} total= {4} />
+      <TodoCounter 
+        completed={completedTodos} 
+        total= {totalTodos} 
+      />
     
       <TodoList>
         {defaultTodos.map(todo => (
