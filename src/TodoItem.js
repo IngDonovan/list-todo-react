@@ -1,10 +1,11 @@
 import './TodoItem.css'
 
 function TodoItem (props) {
+
     return(
       <li className="TodoItem">
         <label>
-          <input type="checkbox" className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}/>
+          <input type="checkbox" checked={props.completed} className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}/>
           <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
           {props.text}
           </p>
