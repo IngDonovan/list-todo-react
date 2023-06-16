@@ -16,7 +16,7 @@ button {
     transition: .3s ease-in;
 }
 
-button:hover {
+button:hover{
     transform: rotate(270deg);
 }
 
