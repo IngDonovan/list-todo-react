@@ -13,8 +13,20 @@ button {
              8px 8px 16px #ffffff;
 }
 
-button::marker{
+/* button:hover{
     background: linear-gradient(315deg, #cacaca, #f0f0f0);
     box-shadow:  -8px -8px 16px #bebebe,
     8px 8px 16px #ffffff;
+    
+} */
+
+button:hover path{
+    stroke: rgb(0, 119, 255);
 }
+
+button:active{
+    background: #e0e0e0;
+    box-shadow: inset  -8px -8px 16px #bebebe,
+    inset 8px 8px 16px #ffffff;
+    
+} 

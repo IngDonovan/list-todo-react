@@ -12,6 +12,11 @@
                  8px 8px 16px #ffffff;
 }
 
+.TodoItem label {
+    display: flex;
+    align-items: center;
+}
+
 .Icon {
     position: absolute;
 }
@@ -21,6 +26,9 @@
     cursor: pointer;
     opacity: 1;
 }
+.Icon-check--active {
+    color: #4caf50;
+  }
 
 .TodoItem-p--complete {
     color: #A5A5A5;

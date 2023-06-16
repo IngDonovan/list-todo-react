@@ -32,13 +32,17 @@
     color: #A5A5A5;
   }
   .cont input:focus {
-    outline-color: red;
+    outline-color: rgb(0, 119, 255);
   }
 
-
-.cont svg{
+.cont-box svg{
     position: absolute;
     right: 10px;
     cursor: pointer;
 }
+
+.cont-box:hover svg circle, .cont-box:hover svg path{
+  fill: rgb(0, 119, 255);
+}
+
 
