@@ -16,10 +16,16 @@ const defaultTodos = [
 ];
 
 function App() {
+  const [searchValue, setSearchValue] = React.useState('');
+  console.log('busca de ' + searchValue);
+
   return (
     <>
       <TodoTitle />
-      <TodoSearch />
+      <TodoSearch 
+        searchValue = {searchValue}
+        setSearchValue = {setSearchValue}
+      />
       <TodoCounter completed={2} total= {4} />
     
       <TodoList>

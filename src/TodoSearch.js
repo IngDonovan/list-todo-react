@@ -1,10 +1,8 @@
 import React from 'react';
 import './TodoSearch.css'
 
-function TodoSearch () {
-  const [searchValue, setSearchValue] = React.useState('');
-
-  console.log('busca de ' + searchValue);
+function TodoSearch ({searchValue, setSearchValue}) {
+  
   return(
     <div className="cont">
       <section className="cont-box">
