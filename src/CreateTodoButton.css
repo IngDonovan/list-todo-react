@@ -1,8 +1,8 @@
 
 button {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     width: 70px;
     height: 70px;
     cursor: pointer;
@@ -11,14 +11,14 @@ button {
     background: linear-gradient(315deg, #f0f0f0, #cacaca);
     box-shadow:  -8px -8px 16px #bebebe,
              8px 8px 16px #ffffff;
+
+    transform: rotate(0);
+    transition: .3s ease-in;
 }
 
-/* button:hover{
-    background: linear-gradient(315deg, #cacaca, #f0f0f0);
-    box-shadow:  -8px -8px 16px #bebebe,
-    8px 8px 16px #ffffff;
-    
-} */
+button:hover {
+    transform: rotate(270deg);
+}
 
 button:hover path{
     stroke: rgb(0, 119, 255);
