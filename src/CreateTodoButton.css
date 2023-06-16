@@ -1,0 +1,20 @@
+
+button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(315deg, #f0f0f0, #cacaca);
+    box-shadow:  -8px -8px 16px #bebebe,
+             8px 8px 16px #ffffff;
+}
+
+button::marker{
+    background: linear-gradient(315deg, #cacaca, #f0f0f0);
+    box-shadow:  -8px -8px 16px #bebebe,
+    8px 8px 16px #ffffff;
+}

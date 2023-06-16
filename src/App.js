@@ -11,7 +11,7 @@ import { CreateTodoButton } from './CreateTodoButton';
 const defaultTodos = [
   { text: 'study React', completed: true },
   { text: 'try React', completed: false },
-  { text: 'study Again React', completed: false },
+  { text: 'study Again React', completed: true },
   { text: 'study full React', completed: false },
 ];
 
@@ -20,7 +20,7 @@ function App() {
     <>
       <TodoTitle />
       <TodoSearch />
-      <TodoCounter completed={16} total= {25} />
+      <TodoCounter completed={2} total= {4} />
     
       <TodoList>
         {defaultTodos.map(todo => (

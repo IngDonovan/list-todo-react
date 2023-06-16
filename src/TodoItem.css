@@ -1,11 +1,39 @@
-.list li {
+.TodoItem {
     display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     width: 300px;
     height: 50px;
-    margin-bottom: 8px;
-    border-radius: 12px;
+    margin-bottom: 10px;
+    border-radius: 16px;
     background: #e0e0e0;
-    box-shadow:  5px 5px 10px #bebebe,
-             -5px -5px 10px #ffffff;
+    box-shadow:  -8px -8px 16px #bebebe,
+                 8px 8px 16px #ffffff;
 }
+
+.Icon {
+    position: absolute;
+}
+
+.Icon-check {
+    left: 10px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.TodoItem-p--complete {
+    color: #A5A5A5;
+    text-decoration: line-through;
+  }
+
+.Icon-delete {
+    right: 10px;
+    cursor: pointer;  
+}
+
+.Icon-delete:hover path{
+    stroke: red;
+  }
+
 
