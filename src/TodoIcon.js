@@ -5,10 +5,11 @@ const iconTypes = {
     "delete": <DeleteSVG />,
 };
 
-function TodoIcon({ type }) {
+function TodoIcon({ type , onClick }) {
     return (
         <span
-            className={`Icon Icon-svg Icon-${type}`}
+            className={`Icon Icon-${type}`}
+            onClick = {onClick}
         >
             {iconTypes[type]}
         </span>
