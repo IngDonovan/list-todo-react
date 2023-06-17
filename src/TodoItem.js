@@ -1,3 +1,4 @@
+import { DeleteIcon } from './DeleteIcon'
 import './TodoItem.css'
 
 function TodoItem (props) {
@@ -17,7 +18,8 @@ function TodoItem (props) {
             {props.text}
           </p>
         </label>
-        <span 
+        <DeleteIcon />
+        {/* <span 
           className="Icon Icon-delete"
           onClick={props.onDelete}
         >
@@ -25,7 +27,7 @@ function TodoItem (props) {
             <path d="M12 12L2 2" stroke="#8A8A8A" strokeWidth="3" strokeLinecap="round"/>
             <path d="M12 2L2 12" stroke="#8A8A8A" strokeWidth="3" strokeLinecap="round"/>
           </svg>
-        </span>
+        </span> */}
       </li>
     );
   }
