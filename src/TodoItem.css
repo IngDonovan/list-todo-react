@@ -30,12 +30,8 @@
     opacity: 1;
 }
 
-.Icon-check:checked {
-    opacity: 0.5;
-}
-
 .Icon-check--active {
-    color: #4caf50;
+    color: rgb(0, 119, 255);
   }
 
 .TodoItem-p{
