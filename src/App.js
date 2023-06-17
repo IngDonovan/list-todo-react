@@ -20,10 +20,17 @@ function App() {
   const [todos, setTodos] = React.useState(defaultTodos);
 
   const [searchValue, setSearchValue] = React.useState('');
-  console.log('busca de ' + searchValue);
+  console.log('buscando ' + searchValue);
 
   const completedTodos = todos.filter( todo => !!todo.completed).length;//doble negación para convertirlo si o si a boolean
   const totalTodos = todos.length;
+
+  const searchedTodos = todos.filter(
+    (todo) => {
+      return todo.text.includes(searchValue);
+    }
+  );
+
   return (
     <>
       <TodoTitle />
@@ -37,7 +44,7 @@ function App() {
       />
     
       <TodoList>
-        {defaultTodos.map(todo => (
+        {searchedTodos.map(todo => (
           <TodoItem 
             key={todo.text} 
             text={todo.text}
