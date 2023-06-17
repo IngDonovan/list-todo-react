@@ -10,10 +10,10 @@ import { CreateTodoButton } from './CreateTodoButton';
 
 const defaultTodos = [
   { text: 'study React', completed: false },
-  { text: 'try React', completed: false },
-  { text: 'study Again React', completed: true },
+  { text: 'try Reáct', completed: false },
+  { text: 'study Again.React', completed: true },
   { text: 'study full React', completed: true },
-  { text: 'Enjoy React', completed: true },
+  { text: 'Enjoy React', completed: false },
 ];
 
 function App() {
@@ -27,7 +27,9 @@ function App() {
 
   const searchedTodos = todos.filter(
     (todo) => {
-      return todo.text.toLowerCase().includes(searchValue.toLocaleLowerCase());
+      const todoText = todo.text.toLowerCase();
+      const searchText = searchValue.toLocaleLowerCase();
+      return todoText.includes(searchText);
     }
   );
 
