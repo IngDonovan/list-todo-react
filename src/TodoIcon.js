@@ -5,19 +5,19 @@ import './TodoIcon.css';
 
 
 const iconTypes = {
-    "check": <BsClipboardCheck className='Icon-svg'/>,
-    "unCheck": <BsClipboardCheckFill className='Icon-svg'/>,
-    "delete": <DeleteSVG className='Icon-svg'/>,
+    "check": (color) => <BsClipboardCheck className='Icon-svg' fill={color}/>,
+    "unCheck": (color) => <BsClipboardCheckFill className='Icon-svg' fill={color}/>,
+    "delete": (color) => <DeleteSVG className='Icon-svg' fill={color}/>,
 };
 
-function TodoIcon({ type , onClick , completed}) {
+function TodoIcon({ type , color , completed, onClick}) {
     
     return (
         <span
             className={`Icon Icon-${type} ${completed ? `Icon-${type}--active` : ''}`}
             onClick = {onClick}
         >
-            {iconTypes[type]}
+            {iconTypes[type](color)}
         </span>
     )
 }

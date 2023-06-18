@@ -9,10 +9,6 @@
     opacity: 1;
 }
 
-.Icon-check--active {
-    color: rgb(0, 119, 255);
-  }
-
 .TodoItem-p{
     cursor:pointer;
 }
@@ -27,11 +23,15 @@
     cursor: pointer;  
 }
 
-.Icon-delete:hover path{
-    stroke: red;
-  }
-
 .Icon-svg{
     height: 20px;
     width: 20px;
 }
+
+.Icon-delete:hover .Icon-svg path{
+    stroke: red;
+  }
+
+.Icon-check {
+    color: rgb(0, 119, 255);
+  }
