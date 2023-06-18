@@ -32,6 +32,6 @@
     stroke: red;
   }
 
-.Icon-check {
-    color: rgb(0, 119, 255);
+.Icon-check:hover .Icon-svg{
+    fill: rgb(0, 119, 255);
   }
