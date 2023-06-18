@@ -6,21 +6,31 @@ import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
 
-
-
-const defaultTodos = [
-  { text: 'study React', completed: false },
-  { text: 'try Reáct', completed: false },
-  { text: 'study Again.React', completed: true },
-  { text: 'study full React', completed: true },
-  { text: 'Enjoy React', completed: false },
-];
+// const defaultTodos = [
+//   { text: 'Primera Tarea', completed: false },
+//   { text: 'Second Task', completed: false },
+//   { text: 'Terzo Compito', completed: true },
+//   { text: 'Quartus Opus', completed: true },
+//   { text: 'Cinquième Tâche', completed: false },
+// ];
+// localStorage.setItem('TASK_V1', JSON.stringify(defaultTodos));
+// localStorage.removeItem('TASK_V1');
 
 function App() {
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const localStorageTodos = localStorage.getItem('TASK_V1');
+
+  let parsedTodos;
+
+  if (!localStorageTodos) {
+    localStorage.setItem('TASK_V1', JSON.stringify([]));
+    parsedTodos = [];
+  } else {
+    parsedTodos = JSON.parse(localStorageTodos);
+  }
+
+  const [todos, setTodos] = React.useState(parsedTodos);
 
   const [searchValue, setSearchValue] = React.useState('');
-  // console.log('buscando ' + searchValue);
 
   const completedTodos = todos.filter( todo => !!todo.completed).length;//doble negación para convertirlo si o si a boolean
   const totalTodos = todos.length;
