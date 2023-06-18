@@ -4,9 +4,9 @@ import { BsClipboardCheckFill } from 'react-icons/bs';
 
 
 const iconTypes = {
-    "check": <BsClipboardCheck />,
-    "unCheck": <BsClipboardCheckFill />,
-    "delete": <DeleteSVG />,
+    "check": <BsClipboardCheck className='Icon-svg'/>,
+    "unCheck": <BsClipboardCheckFill className='Icon-svg'/>,
+    "delete": <DeleteSVG className='Icon-svg'/>,
 };
 
 function TodoIcon({ type , onClick , completed}) {
