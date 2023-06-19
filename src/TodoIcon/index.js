@@ -1,4 +1,4 @@
-import { ReactComponent as DeleteSVG } from '../quit.svg';
+import { ReactComponent as DeleteSVG } from './quit.svg';
 import { BsClipboardCheck } from 'react-icons/bs';
 import { BsClipboardCheckFill } from 'react-icons/bs';
 import './TodoIcon.css';
