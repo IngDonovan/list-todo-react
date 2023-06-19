@@ -22,6 +22,20 @@ function App() {
   const completedTodos = todos.filter( todo => !!todo.completed).length;//doble negación para convertirlo si o si a boolean
   const totalTodos = todos.length;
 
+  console.log('log 1');
+  
+  // React.useEffect(() => {
+  //   console.log('looooooooooog 2');
+  // });//sale al final
+  // React.useEffect(() => {
+  //   console.log('looooooooooog 2');
+  // },[]);//solo se consulta una vez , sale al final, se ejecuta la primera vez
+  // React.useEffect(() => {
+  //   console.log('looooooooooog 2');
+  // },[totalTodos]);//al borrar uno vuelve y se carga
+
+  console.log('log 3');
+
   const searchedTodos = todos.filter(
     (todo) => {
       const todoText = todo.text.toLowerCase();
