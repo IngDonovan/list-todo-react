@@ -3,7 +3,9 @@ import './TodosLoading.css'
 
 function TodosLoading() {
     return (
-        <p>Cargando...</p>
+        <div className="spinner">
+            <div className="spinner1"></div>
+        </div>
     );
 }
 
