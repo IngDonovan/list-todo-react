@@ -27,6 +27,15 @@ function TodoProvider( { children } ) {//la lógica de varios niveles
           return todoText.includes(searchText);
         }
       );
+
+      const addTodo = (text) => {
+        const newTodos = [...todos];
+        newTodos.push({
+          text,
+          completed: false,
+        });
+        saveTodos(newTodos);
+      }
     
       const completeTodo = (text) => {
         const newTodos = [...todos];
@@ -56,6 +65,7 @@ function TodoProvider( { children } ) {//la lógica de varios niveles
             completedTodos,
             totalTodos,
             searchedTodos,
+            addTodo,
             completeTodo,
             deleteTodo,
             openModal,
