@@ -12,6 +12,8 @@ function TodoProvider( { children } ) {//la lógica de varios niveles
       } = useLocalStorage('TASK_V1',[]);
     
       const [searchValue, setSearchValue] = React.useState('');
+
+      const [openModal, setOpenModal] = React.useState(false);
     
       const completedTodos = todos.filter( todo => !!todo.completed).length;//doble negación para convertirlo si o si a boolean
       const totalTodos = todos.length;
@@ -56,6 +58,8 @@ function TodoProvider( { children } ) {//la lógica de varios niveles
             searchedTodos,
             completeTodo,
             deleteTodo,
+            openModal,
+            setOpenModal,
         }}>
             {children}
         </TodoContext.Provider>
