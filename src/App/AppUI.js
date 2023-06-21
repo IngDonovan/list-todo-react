@@ -29,7 +29,8 @@ function AppUI({
           />
           <TodoCounter 
             completed={completedTodos} 
-            total= {totalTodos} 
+            total= {totalTodos}
+            load = {loading}
           />
         
           <TodoList>
