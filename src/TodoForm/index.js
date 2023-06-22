@@ -31,6 +31,7 @@ function TodoForm() {
                 placeholder='Estudiar con mucho esfuerzo...'
                 value = {newTodoValue}
                 onChange={onChange}
+                required
             />
             <div className='TodoForm-buttonContainer'>
                 <button 
