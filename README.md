@@ -1,5 +1,13 @@
 # ToDo Project with React
 
+This proyect is the product of the first class to REACT in Platzi its about TODO's.
+
+Enjoy it!
+
+## Deploy Link
+
+https://ingdonovan.github.io/list-todo-react/
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
