@@ -1,12 +1,12 @@
 import { ReactComponent as DeleteSVG } from './quit.svg';
-import { BsClipboardCheck } from 'react-icons/bs';
+import { BsCheckCircleFill } from 'react-icons/bs';
 import { BsClipboardCheckFill } from 'react-icons/bs';
 import './TodoIcon.css';
 
 
 const iconTypes = {
-    "check": (color) => <BsClipboardCheck className='Icon-svg' fill={color}/>,
-    "unCheck": (color) => <BsClipboardCheckFill className='Icon-svg' fill={color}/>,
+    "check": (color) => <BsCheckCircleFill className='Icon-svg' fill={color}/>,
+    // "unCheck": (color) => <BsClipboardCheckFill className='Icon-svg' fill={color}/>,
     "delete": (color) => <DeleteSVG className='Icon-svg' fill={color}/>,
 };
 

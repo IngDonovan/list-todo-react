@@ -1,12 +1,15 @@
 .TodoForm-Container {
     width: 90%;
     max-width: 300px;
-    background-color: #fff;
     padding: 33px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #e0e0e0;;
+    border-radius: 16px;
+    box-shadow:  9px 9px 18px #282b30,
+             -9px -9px 18px #363a40;
 }
 
 .TodoForm-Container label {
@@ -20,7 +23,7 @@
 .TodoForm-Container textarea {
     background-color: #F9FBFC;
     border: 2px solid #202329;
-    border-radius: 2px;
+    border-radius: 12px;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
     color: #1E1E1F;
     font-size: 20px;
@@ -32,12 +35,12 @@
 
 .TodoForm-Container textarea::placeholder {
     color: #A5A5A5;
-    font-family: 'Montserrat';
+   
     font-weight: 400;
   }
 
 .TodoForm-Container textarea:focus {
-    outline-color: #61DAFA;
+    outline-color:rgb(0, 119, 255);
   }
 
 .TodoForm-buttonContainer {
@@ -52,20 +55,41 @@
     cursor: pointer;
     display: inline-block;
     font-size: 20px;
-    color: #202329;
     font-weight: 400;
     width: 120px;
     height: 48px;
-    border-radius: 2px;
+    border-radius: 7px;
     border: none;
-    font-family: 'Montserrat';
+    
 }
  
 .TFB--cancel {
     background: transparent;
 }
 
-.TFB--add {
+.TFB--cancel:hover {
+    color: white;
+    background: red;
+}
+
+/* .TFB--add {
     background: #61DAFA;
     box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
-}
+} */
+  
+  .TFB--add {
+    color: white;
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+    transition: 0.5s;
+    transition-property: box-shadow;
+  }
+  
+  .TFB--add:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+  }
+
+  
