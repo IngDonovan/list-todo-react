@@ -1,4 +1,5 @@
 import React from 'react';
+import { TodoHeader } from '../TodoHeader';
 import { TodoTitle } from '../TodoTitle';
 import { TodoSearch } from '../TodoSearch';
 import { TodoCounter } from '../TodoCounter';
@@ -22,28 +23,42 @@ function AppUI() {
     completeTodo,
     deleteTodo,
     openModal,
-    setOpenModal,
+    totalTodos,
+    searchValue,
+    setSearchValue,
   } = React.useContext(TodoContext);
 
     return (
         <>
-          <TodoTitle />
-          <TodoSearch />
-          <TodoCounter />
-            <TodoList>
-              {loading && <TodosLoading />}
-              {error && <TodosError />}
-              {(!loading && searchedTodos.length === 0) && <EmptyTodos />}
-              {searchedTodos.map(todo => (
-                <TodoItem 
-                  key={todo.text} 
-                  text={todo.text}
-                  completed={todo.completed}
-                  onComplete={() => completeTodo(todo.text)}
-                  onDelete={() => deleteTodo(todo.text)}
-                />
-              ))}
-            </TodoList>        
+          <TodoHeader>
+            <TodoTitle />
+            <TodoSearch 
+              searchValue = {searchValue}
+              setSearchValue = {setSearchValue}
+            />
+            <TodoCounter 
+              loading = {loading}
+              completedTodos = {completeTodo}
+              totalTodos = {totalTodos}
+            />
+          </TodoHeader>
+
+          <TodoList>
+            {loading && <TodosLoading />}
+            {error && <TodosError />}
+            {(!loading && searchedTodos.length === 0) && <EmptyTodos />}
+
+            {searchedTodos.map(todo => (
+              <TodoItem 
+                key={todo.text} 
+                text={todo.text}
+                completed={todo.completed}
+                onComplete={() => completeTodo(todo.text)}
+                onDelete={() => deleteTodo(todo.text)}
+              />
+            ))}
+          </TodoList>
+
           <CreateTodoButton />
 
           {openModal && (
