@@ -1,11 +1,8 @@
 import React from "react";
-import { TodoContext } from '../TodoContext';
 import './EmptyTodos.css'
 
-function EmptyTodos() {
-    const {
-        loading,
-      } = React.useContext(TodoContext);
+function EmptyTodos({loading}) {
+
     //   console.log(loading);
     return ( loading ? 
         <p>Crea tu primera Tarea...</p>

@@ -1,9 +1,8 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-const TodoContext = React.createContext();
 
-function TodoProvider( { children } ) {//la lógica de varios niveles
+function useTodos( ) {//la lógica de varios niveles
     const {
         item:todos,
         saveItem:saveTodos,
@@ -56,24 +55,20 @@ function TodoProvider( { children } ) {//la lógica de varios niveles
         saveTodos(newTodos);
       };
 
-    return(      
-        <TodoContext.Provider value={{
-            loading,
-            error,
-            searchValue,
-            setSearchValue,
-            completedTodos,
-            totalTodos,
-            searchedTodos,
-            addTodo,
-            completeTodo,
-            deleteTodo,
-            openModal,
-            setOpenModal,
-        }}>
-            {children}
-        </TodoContext.Provider>
-    );
+    return{
+      loading,
+      error,
+      searchValue,
+      setSearchValue,
+      completedTodos,
+      totalTodos,
+      searchedTodos,
+      addTodo,
+      completeTodo,
+      deleteTodo,
+      openModal,
+      setOpenModal,
+    };
 };
 
-export { TodoContext, TodoProvider };
+export { useTodos };
