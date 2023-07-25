@@ -27,6 +27,7 @@ function App() {
     setSearchValue,
     addTodo, 
     setOpenModal,
+    completedTodos,
   } = useTodos();
 
   return (
@@ -39,7 +40,7 @@ function App() {
             />
             <TodoCounter 
               loading = {loading}
-              completedTodos = {completeTodo}
+              completedTodos = {completedTodos}
               totalTodos = {totalTodos}
             />
           </TodoHeader>

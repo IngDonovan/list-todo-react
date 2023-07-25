@@ -2,7 +2,9 @@ import React from 'react';
 import './TodoCounter.css';
 
 function TodoCounter({loading, completedTodos, totalTodos}) {
-  // console.log(loading);
+  // console.log('cargando?',loading);
+  console.log('Todos Completados',completedTodos);
+  // console.log('Total de Todos', totalTodos);
   if (!loading) {
     if (totalTodos === 0) {
       return (

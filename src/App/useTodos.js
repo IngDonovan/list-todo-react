@@ -2,7 +2,7 @@ import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 
-function useTodos( ) {//la lógica de varios niveles
+function useTodos() {//la lógica de varios niveles
     const {
         item:todos,
         saveItem:saveTodos,
@@ -14,7 +14,8 @@ function useTodos( ) {//la lógica de varios niveles
 
       const [openModal, setOpenModal] = React.useState(false);
     
-      const completedTodos = todos.filter( todo => !!todo.completed).length;//doble negación para convertirlo si o si a boolean
+      const completedTodos = todos.filter(todo => !!todo.completed).length;//doble negación para convertirlo si o si a boolean
+      console.log(completedTodos);// acá va bien cuenta los completados----------------
       const totalTodos = todos.length;
     
     
